@@ -1,0 +1,63 @@
+-- HUMAN RESOURCE MACHINE PROGRAM --
+
+a:
+    INBOX   
+    JUMPZ    c
+    COPYTO   0
+    COPYTO   2
+    INBOX   
+    JUMPZ    d
+    COPYTO   1
+b:
+    BUMPDN   1
+    COPYFROM 1
+    JUMPZ    e
+    COPYFROM 2
+    ADD      0
+    COPYTO   0
+    JUMP     b
+c:
+    INBOX   
+d:
+    COPYFROM 9
+    JUMP     f
+e:
+    COMMENT  0
+    COPYFROM 0
+f:
+    OUTBOX  
+    JUMP     a
+
+
+DEFINE COMMENT 0
+eJwzZWBgWKbSVepm0FXqaMRR8svEOuuXiWKEjcnsYEejEL/ZGgHe6SrX/Fcq3wparbQmfrWSYFWK6oYJ
+8upbJr+32DJZzaZw4k2HFV3XHbtKg53tcwNcMmN7XZdEcrorRpT6laatCZxetzLodc/KoL0zlUPrZvnH
+GE1yj3/eyZog22yTLFj1I6WtyCRNL9Ek7VHEjhTJBqN0vf7VmWZT5fP2zryVbz3Du1Srx7s0ofV8MU+5
+SFFdzt08o5QVWWviP6VpxQGdznCoYkm7W3lb0fEyvcSj5fb2LBVtYgyjYBSMAqIBAIv0Vhs;
+
+DEFINE LABEL 0
+eJzTZWBgmFB8S+VS0XfLlJy92RvSl7T3xGrtEoipOioQw3AKKM3gVzJfY2+VqP+cNtnmWe0+S/h6NuwD
+iafkyDbPKJhe11EmWvu86VotSOzR5vkt6ptimszXyDaLLjy56MEc2Y2Jc1K3LZxz6dq8uSueSc1//eLt
+eq0XILW+l82mCl9c0xt/ZkXX41OZ3WuO/5hacMx9YcGxDfv0jtufzDrhcynjZMDVhacvXXO9Nvn6vhuC
+137c8rnEMApGwSigGgAA6eNYMQ;
+
+DEFINE LABEL 1
+eJzTYWBg8NFbY3hKz8zylJ7oaiCXwVP/u6WLYanFTQczy4vOzk6+riF+fK6FyWJOAZVfzJrmVpucXMRu
+ELAcpHZ5sGLbvTDFNv+Y2Y2sCaK1jYn9FXVJB/MYknZmcMSviT8Xkxk7JSoz9kbEmvgi/5MlFr7zW0r9
+rGfkBvYvexYsujooWnT17mSfJSCzttZ+T2+oNEtnL9+bfSv/XvPs/MKJl4omr+QviVjbXPF4S0ZT6jaG
+UTAKRgFVAQAGk0Zl;
+
+DEFINE LABEL 2
+eJwTY2BgSGh9pPWw5Y9NdqN1ll3VzmmRBU2nw1L//wdKMfysfqS1tbbJcW1DTMiT5s8pAt2yzVaTneel
+z5q/iXfJn2MQNZLrzGpDVmU3+iz5NsVokvzcx20Mo2AUjIIhAQC4YygF;
+
+DEFINE LABEL 9
+eJxzZWBgsJJdY9jqscbQ1eOz2SurhHBHo50ZMRo85dzi95ovijxuOyea2f1VLrfvgNGKrnZ3rZ65eUaT
+gNoYMrPqcu7n1uWIFH1P31W9JHJrbUTg9xoOt4ZKBgfv0r22Vwv32t7KZ3B4lakVl5exM0M/g6XwVea5
+8uj8Ww0Q/ZOrn2ZPr5udH1F/rYOnHCRmOyk16vck5wKLKZmxRtMiArNmcrjdmG9meXaxkVnbMiMz+5Vm
+liB1X9e8Tyxc51yQuVGw6s7WmKauPYpt1ockGz4e5Sl/eaIuJ+m0Vlz8mQBvhTNNjsqnK60zThqZGRzL
+NdpzUMvg1YY1hparjcxA5mxY1+S4eS2Hm8naED+TtYoRG9ZpxTGggapzgskvT1gHrz92zZ/xQKHPqj3X
+/Cu2P4oAyYm82LkWRD9/Y59r98HM0u7Dc92G91oGz9+cdPN7ZZ8b9tys7vszhlaQmr1Pdq6d8Wz6mgkv
+/6y/9MJnt8iL/r3fn+XusXzGsdPyWdOWsOf2m8Kec+xEt38UjAJaAgCta6yk;
+
+
