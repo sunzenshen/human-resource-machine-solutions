@@ -1,0 +1,67 @@
+Prime_Factory(int):
+        push    rbp
+        mov     rbp, rsp
+        mov     DWORD PTR [inbox], edi       ; inbox as param
+        mov     DWORD PTR [zero], 0          ; already init
+
+        mov     eax, DWORD PTR [zero]
+        add     eax, 2
+        mov     DWORD PTR [two], eax         ; [two] = 2
+
+        mov     eax, DWORD PTR [two]
+        mov     DWORD PTR [candidate], eax   ; [candidate] = 2
+
+        mov     DWORD PTR [outbox], 9999
+
+        mov     eax, DWORD PTR [inbox]
+        mov     DWORD PTR [target], eax       ; [target] = [inbox]
+
+        mov     DWORD PTR [numerator],  2222  ; don't need to init yet
+        mov     DWORD PTR [divisor],    2333
+        mov     DWORD PTR [div_result], 2444
+        mov     DWORD PTR [mod_result], 2555
+.L7:
+        mov     eax, DWORD PTR [target]
+        cmp     eax, DWORD PTR [candidate]
+        je      .L2
+
+        mov     eax, DWORD PTR [target]
+        mov     DWORD PTR [numerator], eax
+
+        mov     eax, DWORD PTR [candidate]
+        mov     DWORD PTR [divisor], eax
+
+        mov     DWORD PTR [div_result], 0
+.L4:
+        cmp     DWORD PTR [numerator], 0
+        js      .L3
+
+        add     DWORD PTR [div_result], 1
+
+        mov     eax, DWORD PTR [divisor]
+        sub     DWORD PTR [numerator], eax
+        jmp     .L4
+.L3:
+        sub     DWORD PTR [div_result], 1
+        mov     edx, DWORD PTR [numerator]
+        mov     eax, DWORD PTR [divisor]
+        add     eax, edx
+        mov     DWORD PTR [mod_result], eax
+        cmp     DWORD PTR [mod_result], 0
+        je      .L5
+        add     DWORD PTR [candidate], 1
+        jmp     .L7
+.L5:
+        mov     eax, DWORD PTR [div_result]
+        mov     DWORD PTR [target], eax
+
+        mov     eax, DWORD PTR [candidate]
+        mov     DWORD PTR [outbox], eax
+
+        jmp     .L7
+.L2:
+        mov     eax, DWORD PTR [target]
+        mov     DWORD PTR [outbox], eax
+        nop
+        pop     rbp
+        ret
